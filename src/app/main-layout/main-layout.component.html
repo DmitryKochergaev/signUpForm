@@ -1,0 +1,117 @@
+<div id="mainContainer">
+
+  <div id="container">
+    <button id="btn" (click)="signUp()">Sign Up</button>
+  </div>
+  <div id="signFromMain" *ngIf="isSign">
+    <form [formGroup]="form" (ngSubmit)="submit()" *ngIf="reg">
+      <div id="signFrom">
+        <div class="card">
+          <div class="card-header" id="cardHeader">
+            <p style="color: white"><strong>Sing Up</strong></p>
+          </div>
+          <div class="card-body">
+            <div id="cardInput1">
+              <div id="cardInput1-1">
+                <input type="text" formControlName="firstName" placeholder="First name" class="inputNames"
+                       id="cardInput1-1-1">
+                <small class="validators" id="cardInput1-1-2"
+                       *ngIf="form.get('firstName').errors?.required && formSub ">Обязательное
+                  поле</small>
+              </div>
+              <div id="cardInput1-2">
+                <input type="text" id="cardInput1-2-1" formControlName="lastName" placeholder="Last name"
+                       class="inputNames">
+                <small class="validators" id="cardInput1-2-2"
+                       *ngIf="form.get('firstName').errors?.required && formSub ">Обязательное
+                  поле</small>
+              </div>
+            </div>
+            <div id="cardInput2">
+              <div id="cardInput2-1">
+                <div>
+                  <p class="text-muted">Gender</p>
+                  <small class="validators"
+                         *ngIf="form.get('gender').errors?.required && formSub ">Обязательное
+                    поле</small>
+                </div>
+                <div class="form-check ml-2">
+                  <input class="form-check-input" formControlName="gender" type="radio" id="gridRadios1" value="Male">
+                  <label class="form-check-label" for="gridRadios1">
+                    Male
+                  </label>
+                </div>
+                <div class="form-check ml-2 mr-4">
+                  <input class="form-check-input" formControlName="gender" type="radio" id="gridRadios2" value="Female">
+                  <label class="form-check-label " for="gridRadios2">
+                    Female
+                  </label>
+                </div>
+              </div>
+              <div id="ageDiv">
+                <p class="text-muted">Age</p>
+                <div id="ageInputDiv " class="ml-3">
+                  <input type="number" formControlName="age" id="ageInput" class="input ">
+                  <div id="ageInput-1">
+                    <small class="validators"
+                           *ngIf="form.get('age').errors?.max && formSub ">Не более 100
+                    </small>
+                    <small class="validators"
+                           *ngIf="form.get('age').errors?.min && formSub ">Не менее 10
+                    </small>
+                    <small class="validators"
+                           *ngIf="form.get('age').errors?.required && formSub ">Обязательное
+                      поле</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="cardInput3">
+              <label for="email" class="text-muted" style="font-size: x-small">Email</label>
+              <input type="email" formControlName="email" id="email" placeholder="Email" class="inputNames">
+              <small class="validators"
+                     *ngIf="form.get('email').errors?.required && formSub ">Обязательное
+                поле</small>
+              <small class="validators"
+                     *ngIf="form.get('email').errors?.email && formSub ">Введите Email
+              </small>
+            </div>
+            <div id="cardInput4">
+              <div id="cardInput4-1">
+                <label for="pass" class="text-muted" style="font-size: x-small">Password</label>
+                <input type="password" formControlName="pass" class="inputNames" id="pass">
+                <small class="validators"
+                       *ngIf="form.get('pass').errors?.required && formSub ">Обязательное
+                  поле</small>
+              </div>
+              <div id="cardInput4-2">
+                <label for="passConfirm" class="text-muted" style="font-size: x-small">Confirm Password</label>
+                <input type="password" formControlName="passConf" class="inputNames" id="passConfirm"
+                       (change)="checkPass()">
+                <small class="validators"
+                       *ngIf="form.get('passConf').errors?.required && formSub ">Обязательное
+                  поле</small>
+                <small class="validators" *ngIf="passWrong && form.get('passConf').touched">Пароли не совпадают</small>
+              </div>
+            </div>
+
+          </div>
+          <div class="card-footer" id="cardFooter">
+            <button class="btn" id="cardBtn" type="submit" (click)="formCheck()">Sign Up</button>
+          </div>
+        </div>
+      </div>
+    </form>
+
+
+    <div *ngIf="!reg" id="confirmForm" class="card">
+      <p class="confFormText">First name: {{person1.firstName}}</p>
+      <p class="confFormText">Last name: {{person1.lastName}}</p>
+      <p class="confFormText">Age: {{person1.age}}</p>
+      <p class="confFormText">Email: {{person1.email}}</p>
+      <button (click)="signUpAgain()" id="confirmFormBtn">Sign up again</button>
+    </div>
+  </div>
+
+  <div id="gray" *ngIf="isSign" (click)="signUp()"></div>
+</div>

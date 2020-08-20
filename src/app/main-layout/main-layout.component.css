@@ -1,0 +1,243 @@
+#mainContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#btn {
+  width: 200px;
+  height: 25px;
+  margin-top: 30px;
+  background-color: dodgerblue;
+  padding-bottom: 30px;
+  padding-top: 5px;
+  color: white;
+  outline: none;
+  border: 1px darkblue solid;
+
+
+}
+
+#signFromMain {
+  z-index: 50;
+  margin-top: 150px;
+  display: flex;
+  justify-content: center;
+
+}
+
+#signFrom {
+  width: 500px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+
+}
+
+#gray {
+  background-color: rgba(0, 0, 0, 0.60);
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 20;
+}
+
+#container {
+  display: flex;
+  justify-content: center;
+
+}
+
+#cardHeader {
+  background-color: dodgerblue;
+}
+
+.card-header {
+  padding-bottom: 0;
+}
+
+#cardInput1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+
+#cardInput1-1 {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin-right: 15px;
+}
+
+#cardInput1-2 {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+#cardInput1-1-1 {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+#cardInput1-2-1 {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+}
+
+#cardInput2 {
+  display: flex;
+  flex-direction: row;
+  margin-top: 15px;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+#cardInput2-1 {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+
+#cardInput3 {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+#cardInput4 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#cardInput4-1 {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  margin-right: 15px;
+}
+
+#cardInput4-2 {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+#ageInput {
+  border: none;
+  border-bottom: 1px black solid;
+  border-block: none;
+  outline: none;
+}
+
+#ageDiv {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+
+}
+
+#ageInputDiv {
+  display: flex;
+  flex-direction: column;
+}
+
+#ageInput-1 {
+  display: flex;
+  flex-direction: column;
+}
+
+#cardFooter {
+  display: flex;
+  justify-content: center;
+}
+
+#cardBtn {
+  color: white;
+  background-color: dodgerblue;
+}
+
+#confirmForm {
+  width: 500px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+#confirmFormBtn {
+  color: white;
+  background-color: dodgerblue;
+  width: 150px;
+  margin-bottom: 10px;
+  align-self: center;
+}
+
+.confFormText {
+  text-align: center;
+}
+
+.inputNames {
+  border: none;
+  border-bottom: 1px black solid;
+  flex: 1;
+  outline: none;
+}
+
+.validators {
+  font-size: xx-small;
+  color: red;
+}
+
+label {
+  margin-bottom: unset;
+}
+
+@media (max-width: 350px) {
+
+  #cardInput4-1 {
+    margin-right: unset;
+    margin-bottom: 15px;
+  }
+
+  #cardInput1-1 {
+    margin-right: unset;
+  }
+
+  .inputNames {
+    margin-right: unset;
+  }
+
+  #signFromMain {
+    display: flex;
+  }
+
+  #signFrom {
+    display: flex;
+    width: 350px;
+  }
+
+  #cardInput1 {
+    flex-direction: column;
+  }
+
+  #cardInput2 {
+    flex-direction: column;
+  }
+
+  #cardInput4 {
+    flex-direction: column;
+  }
+
+
+
+
+}
